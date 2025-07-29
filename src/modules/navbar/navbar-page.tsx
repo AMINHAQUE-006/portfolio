@@ -1,0 +1,99 @@
+"use client"
+import * as React from "react"
+
+
+
+export default function NavbarPage() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  return (
+     (
+    <header className="bg-black shadow-sm sticky top-0 z-50">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <div className="md:flex md:items-center md:gap-12">
+            <a className="block text-2xl font-bold text-white " href="#">
+              AMIN H<span className="font-extrabold text-2xl">.</span>
+            </a>
+          </div>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:block">
+            <nav aria-label="Global">
+              <ul className="flex items-center gap-6 text-sm">
+                <li>
+                  <a className="text-white  transition" href="#">
+                    Work
+                  </a>
+                </li>
+                <li>
+                  <a className="text-white  transition" href="#">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a className="text-white  transition" href="#">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              className="rounded bg-white p-2 text-white "
+              aria-label="Toggle Menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-black"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Nav Menu */}
+        {isMobileMenuOpen && (
+          <nav className="md:hidden mt-2">
+            <ul className="space-y-2 text-sm text-white">
+              <li>
+                <a href="#" className="block px-4 py-2 rounded transition">
+                  Work
+                </a>
+              </li>
+              <li>
+                <a href="#" className="block px-4 py-2 rounded transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="block px-4 py-2 rounded transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        )}
+      </div>
+    </header>
+  )
+  )
+}
