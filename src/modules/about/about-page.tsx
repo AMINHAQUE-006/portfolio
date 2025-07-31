@@ -16,7 +16,7 @@ const ContactPage = () => {
               href="mailto:robertgarcia@gmail.com"
               className="underline hover:text-lime-400"
             >
-              robertgarcia@gmail.com
+              aminhaque5006@gmail.com
             </a>
           </p>
           <p className="text-gray-300">
@@ -59,7 +59,7 @@ const ContactPage = () => {
           </div>
 
           <p className="text-sm text-gray-500 mt-10">
-            © 2023 Robert Garcia. All rights reserved.
+            © 2023 Amin Haque. All rights reserved.
           </p>
         </div>
 
