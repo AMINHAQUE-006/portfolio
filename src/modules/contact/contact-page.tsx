@@ -8,7 +8,7 @@ const ContactPage = () => {
         {/* Left Panel */}
         <div className="flex flex-col gap-5 max-w-lg">
           <h2 className="text-4xl font-bold uppercase tracking-wide">
-            Let’s Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-gray-300">
             Say hello at{" "}
@@ -20,7 +20,7 @@ const ContactPage = () => {
             </a>
           </p>
           <p className="text-gray-300">
-            For more info, here's my{" "}
+            For more info, here&apos;s my{" "}
             <a href="#" className="underline hover:text-lime-400">
               resume
             </a>

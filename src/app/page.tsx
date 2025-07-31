@@ -1,4 +1,4 @@
-import ContactPage from "@/modules/about/about-page";
+import ContactPage from "@/modules/contact/contact-page";
 import HomePage from "@/modules/home/home-page";
 import NavbarPage from "@/modules/navbar/navbar-page";
 import WorkPage from "@/modules/work/work-page";
