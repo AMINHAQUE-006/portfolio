@@ -6,13 +6,21 @@ import WorkPage from "@/modules/work/work-page";
 
 export default function Home() {
   return (
-  <div>
+  <>
       <NavbarPage />
-      <HomePage />
-      <hr />
-      <WorkPage />
-      <hr />
-      <ContactPage />
-  </div>
+      <main>
+        <section id="home">
+          <HomePage />
+        </section>
+        <hr />
+        <section id="project">
+          <WorkPage />
+        </section>
+        <hr />
+        <section id="contact">
+          <ContactPage />
+        </section>
+      </main>
+  </>
   );
 }

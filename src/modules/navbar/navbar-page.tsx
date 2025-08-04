@@ -17,7 +17,9 @@ export default function NavbarPage() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block text-2xl font-bold text-white " href="#">
+            <a className="block text-2xl font-bold text-white " href="#home" onClick={() => (
+              setIsMobileMenuOpen(false)
+            )}>
               AMIN H<span className="font-extrabold text-2xl">.</span>
             </a>
           </div>
@@ -27,17 +29,17 @@ export default function NavbarPage() {
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
-                  <a className="text-white  transition" href="#">
+                  <a className="text-white  transition" href="#project">
                     Work
                   </a>
                 </li>
                 <li>
-                  <a className="text-white  transition" href="#">
+                  <a className="text-white  transition" href="#about">
                     About
                   </a>
                 </li>
                 <li>
-                  <a className="text-white  transition" href="#">
+                  <a className="text-white  transition" href="#contact">
                     Contact
                   </a>
                 </li>
@@ -75,17 +77,23 @@ export default function NavbarPage() {
           <nav className="md:hidden mt-2">
             <ul className="space-y-2 text-sm text-white">
               <li>
-                <a href="#" className="block px-4 py-2 rounded transition">
+                <a href="#project" className="block px-4 py-2 rounded transition" onClick={() => (
+                  setIsMobileMenuOpen(false)
+                )}>
                   Work
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 rounded transition">
+                <a href="#about" className="block px-4 py-2 rounded transition" onClick={() => (
+                  setIsMobileMenuOpen(false)
+                )}>
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 rounded transition">
+                <a href="#contact" className="block px-4 py-2 rounded transition" onClick={() => (
+                  setIsMobileMenuOpen(false)
+                )}>
                   Contact
                 </a>
               </li>
