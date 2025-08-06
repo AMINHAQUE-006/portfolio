@@ -29,6 +29,11 @@ export default function NavbarPage() {
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 <li>
+                  <a className="text-white  transition" href="#home">
+                    Home
+                  </a>
+                </li>
+                <li>
                   <a className="text-white  transition" href="#project">
                     Work
                   </a>
@@ -39,6 +44,11 @@ export default function NavbarPage() {
                   </a>
                 </li>
                 <li>
+                  <a className="text-white  transition" href="#experience">
+                    Experience
+                  </a>
+                </li>
+                  <li>
                   <a className="text-white  transition" href="#contact">
                     Contact
                   </a>

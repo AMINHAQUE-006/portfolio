@@ -5,7 +5,7 @@ import { PiGithubLogoFill } from "react-icons/pi";
 
 const HomePage = () => {
   return (
-    <div className="bg-black min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 gap-10 text-white">
+    <div className="bg-black min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 gap-10 text-white">
       
       {/* Left Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-6">
@@ -19,8 +19,8 @@ const HomePage = () => {
         </p>
 
         <div className="flex items-center gap-4 mt-4">
-          <button className="btn btn-accent rounded-full px-6 bg-lime-300 text-black hover:bg-lime-400 transition-colors uppercase">
-            Contact Me
+          <button className="btn rounded-full px-6 bg-lime-300 text-black hover:bg-lime-400 transition-colors uppercase">
+          <a href="#contact">Contact Me</a>
           </button>
 
           <a
