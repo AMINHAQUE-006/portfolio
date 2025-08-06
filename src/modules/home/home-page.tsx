@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { PiGithubLogoFill } from "react-icons/pi";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -23,20 +24,20 @@ const HomePage = () => {
           <a href="#contact">Contact Me</a>
           </button>
 
-          <a
-            href="#"
+          <Link
+            href="https://www.linkedin.com/in/amin-haque-109a47263/"
             aria-label="LinkedIn"
             className="btn btn-outline btn-circle hover:bg-lime-300 hover:text-black transition-all"
           >
             <TiSocialLinkedin size={24} />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="https://github.com/AMINHAQUE-006/"
             aria-label="GitHub"
             className="btn btn-outline btn-circle hover:bg-lime-300 hover:text-black transition-all"
           >
             <PiGithubLogoFill size={24} />
-          </a>
+          </Link>
         </div>
       </div>
 
