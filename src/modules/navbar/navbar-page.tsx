@@ -38,7 +38,7 @@ export default function NavbarPage() {
               <ul className="flex items-center gap-6 text-sm">
                 {navLinks.map((el, i) => (
                 <li key={i}>
-                  <a className="text-white hover:font-bold hover:text-lg hover:text-[#BBF451] transition" href={el.href}>
+                  <a className="text-white hover:font-bold hover:scale-110 transition-transform hover:text-[#BBF451]" href={el.href}>
                     {el.name}
                   </a>
                 </li>
@@ -50,9 +50,9 @@ export default function NavbarPage() {
           {/* Mobile Hamburger Button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               className="rounded bg-white p-2 text-white "
               aria-label="Toggle Menu"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ export default function NavbarPage() {
 
         {/* Mobile Nav Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-2">
+          <nav className="md:hidden mt-2 h-screen">
             <ul className="space-y-2 text-sm text-white">
               {navLinks.map((el, i) => (
                 <li key={i}>

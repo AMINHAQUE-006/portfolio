@@ -12,6 +12,19 @@ import {
 } from "react-icons/fa";
 import { SiJavascript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
+const tools = [
+  { icon: <FaHtml5 size={40} className="text-orange-500" />, name: "HTML" },
+  { icon: <FaCss3Alt size={40} className="text-blue-500" />, name: "CSS" },
+  { icon: <SiJavascript size={40} className="text-yellow-400" />, name: "JavaScript" },
+  { icon: <FaReact size={40} className="text-cyan-400" />, name: "React.js" },
+  { icon: <SiTailwindcss size={40} className="text-sky-400" />, name: "Tailwind" },
+  { icon: <FaBootstrap size={40} className="text-purple-500" />, name: "Bootstrap" },
+  { icon: <SiNextdotjs size={40} className="text-white" />, name: "Next.js" },
+  { icon: <FaGitAlt size={40} className="text-orange-400" />, name: "Git" },
+  { icon: <FaGithub size={40} className="text-white" />, name: "GitHub" },
+  { icon: <FaBitbucket size={40} className="text-blue-400" />, name: "Bitbucket" },
+];
+
 const About = () => {
   return (
     <div className="bg-[#241d20] text-white px-6 py-16 min-h-screen">
@@ -28,69 +41,28 @@ const About = () => {
             Applications background. Likes to focus on accessibility when
             developing. Passionate and curious about solving problems.
             Currently, I’m exploring Next.js, Framer Motion and a bit of UI/UX.
-            While I am not programming, I enjoy playing riding bike, watching
-            documentaries and playing games. Learning more to improve skill{" "}
+            While I am not programming, I enjoy riding bikes, watching
+            documentaries and playing games. Learning more to improve skills.
           </p>
         </div>
       </div>
 
       {/* Tools & Skills Section */}
       <div className="max-w-6xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold uppercase mb-8">
+        <h1 className="text-4xl text-[#BBF451] md:text-5xl font-extrabold uppercase mb-8">
           My Tools & Skills
         </h1>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-          {/* HTML */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaHtml5 size={40} className="text-orange-500" />
-            <span className="mt-2 text-sm">HTML</span>
-          </div>
-          {/* CSS */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaCss3Alt size={40} className="text-blue-500" />
-            <span className="mt-2 text-sm">CSS</span>
-          </div>
-          {/* JavaScript */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <SiJavascript size={40} className="text-yellow-400" />
-            <span className="mt-2 text-sm">JavaScript</span>
-          </div>
-          {/* React */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaReact size={40} className="text-cyan-400" />
-            <span className="mt-2 text-sm">React.js</span>
-          </div>
-          {/* Tailwind */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <SiTailwindcss size={40} className="text-sky-400" />
-            <span className="mt-2 text-sm">Tailwind</span>
-          </div>
-          {/* Bootstrap */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaBootstrap size={40} className="text-purple-500" />
-            <span className="mt-2 text-sm">Bootstrap</span>
-          </div>
-          {/* Next.js */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <SiNextdotjs size={40} className="text-white" />
-            <span className="mt-2 text-sm">Next.js</span>
-          </div>
-          {/* Git */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaGitAlt size={40} className="text-orange-400" />
-            <span className="mt-2 text-sm">Git</span>
-          </div>
-          {/* GitHub */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaGithub size={40} className="text-white" />
-            <span className="mt-2 text-sm">GitHub</span>
-          </div>
-          {/* Bitbucket */}
-          <div className="flex flex-col items-center p-4 bg-[#1a1a1a] rounded-xl hover:bg-[#2a2a2a] transition">
-            <FaBitbucket size={40} className="text-blue-400" />
-            <span className="mt-2 text-sm">Bitbucket</span>
-          </div>
+          {tools.map((tool, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-4 bg-black rounded-xl hover:bg-[#BBF451] cursor-pointer hover:text-black transition"
+            >
+              {tool.icon}
+              <span className="mt-2 text-sm">{tool.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
