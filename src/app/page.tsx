@@ -22,10 +22,10 @@ export default function Home() {
           <About />
         </section>
         <hr />
-        <section id="experience">
+        {/* <section id="experience">
           <WorkPage />
         </section>
-        <hr />
+        <hr /> */}
         <section id="contact">
           <ContactPage />
         </section>
