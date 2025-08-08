@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const WorkPage = () => {
   return (
-    <div className="bg-black text-white px-6 py-16 min-h-screen">
+    <div className="bg-[#241d20] text-white px-6 py-16 min-h-screen">
       {/* Page Header */}
       <div className="max-w-6xl mx-auto mb-16">
         <h1 className="text-4xl md:text-5xl font-extrabold uppercase mb-4">Featured Projects</h1>

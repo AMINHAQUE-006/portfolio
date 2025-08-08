@@ -14,7 +14,7 @@ import { SiJavascript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 const About = () => {
   return (
-    <div className="bg-black text-white px-6 py-16 min-h-screen">
+    <div className="bg-[#241d20] text-white px-6 py-16 min-h-screen">
       {/* Page Header */}
       <div className="max-w-6xl mx-auto mb-16 flex flex-col md:flex-row">
         <div className=" w-full md:w-1/2">

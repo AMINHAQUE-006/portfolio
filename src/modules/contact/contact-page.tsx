@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 const ContactPage = () => {
   return (
-    <div className="hero min-h-screen bg-black text-white px-4 sm:px-8 py-12">
+    <div className="hero min-h-screen bg-[#241d20] text-white px-4 sm:px-8 py-12">
       <div className="hero-content flex flex-col lg:flex-row justify-between gap-12 w-full max-w-6xl">
         {/* Left Panel */}
         <div className="flex flex-col gap-5 max-w-lg">
@@ -72,7 +72,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   placeholder="John Doe"
-                  className="input input-bordered bg-black/20 text-white placeholder-gray-400"
+                  className="input input-bordered bg-[#241d20]/20 text-white placeholder-gray-400"
                   required
                 />
               </label>
@@ -82,7 +82,7 @@ const ContactPage = () => {
                 <input
                   type="email"
                   placeholder="you@example.com"
-                  className="input input-bordered bg-black/20 text-white placeholder-gray-400"
+                  className="input input-bordered bg-[#241d20]/20 text-white placeholder-gray-400"
                   required
                 />
               </label>
@@ -92,14 +92,14 @@ const ContactPage = () => {
                 <input
                   type="text"
                   placeholder="Let's talk..."
-                  className="input input-bordered bg-black/20 text-white placeholder-gray-400"
+                  className="input input-bordered bg-[#241d20]/20 text-white placeholder-gray-400"
                 />
               </label>
 
               <label className="form-control w-full">
                 <span className="label-text text-white">Message</span>
                 <textarea
-                  className="textarea textarea-bordered h-32 bg-black/20 text-white placeholder-gray-400"
+                  className="textarea textarea-bordered h-32 bg-[#241d20]/20 text-white placeholder-gray-400"
                   placeholder="Your message..."
                   required
                 />

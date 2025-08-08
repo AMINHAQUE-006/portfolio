@@ -10,14 +10,22 @@ export default function NavbarPage() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  const navLinks = [
+    {name: "Home", href: "/"},
+    {name: "Work", href: "/#project"},
+    {name: "About", href: "/#about"},
+    // {name: "Experience", href: "/experience"},
+    {name: "Contact", href: "/#contact"},
+  ]
+
   return (
      (
-    <header className="bg-black shadow-sm sticky top-0 z-50">
+    <header className="bg-[#241d20] shadow-sm sticky top-0 z-50">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block text-2xl font-bold text-white " href="#home" onClick={() => (
+            <a className="block text-2xl font-bold text-[#BBF451] " href="#home" onClick={() => (
               setIsMobileMenuOpen(false)
             )}>
               AMIN H<span className="font-extrabold text-2xl">.</span>
@@ -28,31 +36,13 @@ export default function NavbarPage() {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
-                <li>
-                  <a className="text-white  transition" href="#home">
-                    Home
+                {navLinks.map((el, i) => (
+                <li key={i}>
+                  <a className="text-white hover:font-bold hover:text-lg hover:text-[#BBF451] transition" href={el.href}>
+                    {el.name}
                   </a>
                 </li>
-                <li>
-                  <a className="text-white  transition" href="#project">
-                    Work
-                  </a>
-                </li>
-                <li>
-                  <a className="text-white  transition" href="#about">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="text-white  transition" href="#experience">
-                    Experience
-                  </a>
-                </li>
-                  <li>
-                  <a className="text-white  transition" href="#contact">
-                    Contact
-                  </a>
-                </li>
+              ))}
               </ul>
             </nav>
           </div>
@@ -86,27 +76,15 @@ export default function NavbarPage() {
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-2">
             <ul className="space-y-2 text-sm text-white">
-              <li>
-                <a href="#project" className="block px-4 py-2 rounded transition" onClick={() => (
-                  setIsMobileMenuOpen(false)
-                )}>
-                  Work
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="block px-4 py-2 rounded transition" onClick={() => (
-                  setIsMobileMenuOpen(false)
-                )}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="block px-4 py-2 rounded transition" onClick={() => (
-                  setIsMobileMenuOpen(false)
-                )}>
-                  Contact
-                </a>
-              </li>
+              {navLinks.map((el, i) => (
+                <li key={i}>
+                  <a className="block px-4 py-2 rounded text-white hover:font-bold hover:text-lg hover:text-[#BBF451] transition" href={el.href} onClick={() => (
+                    setIsMobileMenuOpen(!isMobileMenuOpen)
+                  )}>
+                    {el.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         )}

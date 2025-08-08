@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const HomePage = () => {
   return (
-    <div className="bg-black min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 gap-10 text-white">
+    <div className="bg-[#241d20] min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 py-16 gap-10 text-white">
       
       {/* Left Section */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start gap-6">
@@ -45,7 +45,7 @@ const HomePage = () => {
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <div className="rounded-lg overflow-hidden shadow-lg max-w-sm md:max-w-md">
           <Image
-            src="/image.jpg"
+            src="/image.jpeg"
             width={600}
             height={700}
             alt="Home Profile"
