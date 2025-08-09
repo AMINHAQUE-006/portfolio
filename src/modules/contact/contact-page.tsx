@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import emailjs from "emailjs-com";
 import Link from "next/link";
@@ -12,36 +12,42 @@ const socials = [
   { icon: <FaInstagram />, label: "Instagram", url: "https://www.instagram.com/amin.inst4" },
 ];
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const ContactPage = () => {
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .send(
         "service_2z5qdrn",
         "template_tifu68p",
-        formData,
+          formData as unknown as Record<string, unknown>,
         "5DMNdcxFXob2XFaIc"
       )
       .then(
-        (result) => {
+        () => {
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
-        (error) => {
+        () => {
           alert("Something went wrong, try again.");
         }
       );

@@ -6,9 +6,9 @@ import * as React from "react"
 export default function NavbarPage() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+  // const toggleMobileMenu = () => {
+  //   setIsMobileMenuOpen(!isMobileMenuOpen)
+  // }
 
   const navLinks = [
     {name: "Home", href: "/"},
