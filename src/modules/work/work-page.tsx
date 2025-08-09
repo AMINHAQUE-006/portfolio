@@ -12,7 +12,7 @@ const projects = [
     description: `Emptshirt is an online store offering unique, custom-designed T-shirts and apparel for people who value originality,
     simplicity, and self-expression. Our collections are built around minimalist design, quality fabrics, and bold ideas.`,
     year: 2025,
-    role: "Front-end Developer",
+    role: "Full Stack Developer",
     liveLink: "https://emptshirt.com",
     githubRepo: "",
   },

@@ -37,7 +37,7 @@ const About = () => {
         </div>
         <div className="w-full md:w-1/2">
           <p className="text-gray-300 text-xl my-4">
-            I am a front-end developer based in Kolkata. Has Computer
+            I am a Full Stack Developer based in Kolkata. Has Computer
             Applications background. Likes to focus on accessibility when
             developing. Passionate and curious about solving problems.
             Currently, I’m exploring Next.js, Framer Motion and a bit of UI/UX.

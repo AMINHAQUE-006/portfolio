@@ -16,7 +16,7 @@ const HomePage = () => {
         </div>
 
         <p className="text-base sm:text-lg text-gray-300 max-w-md">
-          A Front-End Developer based in India, passionate about building accessible and user-friendly websites.
+          A Full Stack Developer based in India, passionate about building accessible and user-friendly websites.
         </p>
 
         <div className="flex items-center gap-4 mt-4">
