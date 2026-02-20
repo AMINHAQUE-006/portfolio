@@ -45,7 +45,7 @@ const HomePage = () => {
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <div className="rounded-lg overflow-hidden shadow-lg max-w-sm md:max-w-md">
           <Image
-            src="/image.jpeg"
+            src="/image.jpg"
             width={600}
             height={700}
             alt="Home Profile"
